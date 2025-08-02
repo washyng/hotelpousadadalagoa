@@ -1,0 +1,47 @@
+/* acomodacoes.css */
+main section p:first-child {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+main section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+main section:last-child {
+    border-bottom: none;
+}
+.acomodacao img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+main section div:nth-child(2) {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+main section div ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+main section div ul li {
+    line-height: 1.5em;
+}
+
+@media (max-width: 768px) {
+    main section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .acomodacao img {
+        margin: 0 0 20px 0;
+    }
+}
