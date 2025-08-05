@@ -1,6 +1,35 @@
+/* Oculta o botão do menu hambúrguer por padrão em todas as telas */
+.menu-toggle {
+    display: none;
+}
+
 /* Media Queries para Telas Menores que 768px (Tablets e Smartphones) */
 @media screen and (max-width: 768px) {
-    /* Header e Navegação */
+    /* Exibe o botão do menu hambúrguer apenas em telas pequenas */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 2em;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        z-index: 1001;
+    }
+
+    /* Esconde o menu de navegação por padrão */
+    .menu-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: lightgray;
+        padding: 10px 0;
+    }
+
+    /* Mostra o menu quando a classe 'active' é adicionada via JS */
+    .menu-links.active {
+        display: flex;
+    }
+
     .menu {
         flex-direction: column;
         align-items: flex-start;
@@ -21,32 +50,9 @@
         text-align: left;
     }
 
-    .menu-links {
-        display: none; /* Esconde o menu de navegação por padrão */
-        flex-direction: column;
-        width: 100%;
-        background-color: lightgray;
-        padding: 10px 0;
-    }
-
-    .menu-links.active {
-        display: flex; /* Mostra o menu quando a classe 'active' é adicionada via JS */
-    }
-
     .menu-links a {
         padding: 10px 15px;
         border-bottom: 1px solid #ccc;
-    }
-
-    /* Botão do Hamburguer (o HTML deve ser adicionado) */
-    .menu-toggle {
-        display: block;
-        cursor: pointer;
-        font-size: 2em;
-        position: absolute;
-        top: 25px;
-        right: 25px;
-        z-index: 1001;
     }
 
     /* Seções principais */
@@ -117,5 +123,11 @@
         position: absolute;
         left: 10px;
         font-weight: bold;
+    }
+    .rodape{
+        display: block;
+    }
+    .rodape-main{
+        display: block;
     }
 }
