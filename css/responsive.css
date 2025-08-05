@@ -126,8 +126,19 @@
     }
     .rodape{
         display: block;
+        margin: 0 auto;
     }
     .rodape-main{
         display: block;
+        margin: 0 auto;
     }
+    .rodape-logo{
+        width: 50%;
+    }
+    .rodape-main h1{
+        width: 90%;
+        text-align: center;
+    }
+
+
 }
