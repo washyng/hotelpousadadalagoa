@@ -133,10 +133,14 @@
         margin: 0 auto;
     }
     .rodape-logo{
-        width: 50%;
+        width: 80%;
     }
-    .rodape-main h1{
-        width: 90%;
+    .rodape-main h3{
+        width: 99%;
+        text-align: center;
+    }
+    .rodape-main p{
+        width: 99%;
         text-align: center;
     }
 
