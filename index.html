@@ -10,7 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/geral.css">
-    <link rel="stylesheet" href="/css/index.css"> <title>Hotel Pousada da Lagoa</title>
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <title>Hotel Pousada da Lagoa</title>
 </head>
 
 <body>
@@ -29,6 +31,7 @@
                 <a href="#contato"> Contatos </a>
             </div>
         </nav>
+        <button class="menu-toggle" aria-label="Toggle navigation"> &#9776; </button>
     </header>
 
     <main>
@@ -118,10 +121,18 @@
             </div>
         </div>
         <div class="rodape-corporate">
-            <img src="assets/icon/corporate.png" alt="Ícone Corporate">
-            <p>Desenvolvido por devLoopz</p>
+            <p>&copy; 2025 Hotel Pousada da Lagoa. Todos os direitos reservados. Desenvolvido por devLoopz</p>
         </div>
     </footer>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menuLinks = document.querySelector('.menu-links');
+
+        menuToggle.addEventListener('click', () => {
+            menuLinks.classList.toggle('active');
+        });
+    </script>
+
 </body>
 
 </html>

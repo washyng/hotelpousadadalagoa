@@ -1,3 +1,5 @@
+
+
 /* contato.css */
 .local {
     text-align: center;
@@ -7,43 +9,46 @@
     max-width: 100%;
     height: 450px;
 }
-.forms {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-.forms form {
-    display: flex;
-    flex-direction: column;
-}
-.forms label {
-    margin-top: 10px;
-    font-weight: bold;
-}
-.forms input[type="text"] {
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-.forms button {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: lightgreen;
-    color: black;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1.2em;
-    transition: background-color 0.3s ease;
-}
-.forms button:hover {
-    background-color: darkgreen;
-    color: white;
-}
+.forms {    max-width: 450px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+        input, textarea{
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 400px;
+            margin: 10px 0;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: lightgreen;
+            color: black;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: darkgreen;
+            color: white;
+        }
 
 @media (max-width: 768px) {
     .forms {

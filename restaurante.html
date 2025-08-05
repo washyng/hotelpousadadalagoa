@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="import" href="assets/fonts/amazon.ttf">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/geral.css">
-    <link rel="stylesheet" href="/css/restaurante.css"> <title>Hotel Pousada da Lagoas - Restaurante</title>
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/restaurante.css">
+    <title>Hotel Pousada da Lagoas - Restaurante</title>
 </head>
 <body>
     <header class="menu">
@@ -12,21 +18,23 @@
             <img src="assets/img/logo_nova.jpg" alt="Logo Hotel Pousada da Lagoa">
         </div>
         <nav>
-            <div class="menu-links">
+           <div class="menu-links">
                 <a href="index.html"> Principal </a>
-                <a href="hotel.html"> O Hotel </a>
-                <a href="acomodacoes.html"> Acomodações</a>
-                <a href="lazer.html"> Lazer </a>
-                <a href="restaurante.html"> Restaurante</a>
-                <a href="tarifas.html"> Tarifas </a>
-                <a href="contato.html"> Contatos </a>
+                <a href="index.html#hotel"> O Hotel </a>
+                <a href="index.html#acomodacoes"> Acomodações</a>
+                <a href="index.html#lazer"> Lazer </a>
+                <a href="index.html#restaurante"> Restaurante</a>
+                <a href="index.html#tarifas"> Tarifas </a>
+                <a href="index.html#contato"> Contatos </a>
             </div>
         </nav>
     </header>
 
     <main>
-       
-        
+       <section>
+        <h1>Restaurante</h1>
+        <p>O horário de funcionamento do restaurante é de 11:00hs  ás 22:00hs.<br>A lanchonete funciona 24hs.</p>
+       </section>
         <section>
             <div class="galeria">
                 <img src="assets/foto/restaurante/1.jpg" alt="Interior do restaurante">
@@ -58,9 +66,16 @@
             </div>
         </div>
         <div class="rodape-corporate">
-            <img src="assets/icon/corporate.png" alt="Ícone Corporate">
-            <p>Desenvolvido por devLoopz</p>
+            <p>&copy; 2025 Hotel Pousada da Lagoa. Todos os direitos reservados. Desenvolvido por devLoopz</p>
         </div>
     </footer>
+    <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menuLinks = document.querySelector('.menu-links');
+
+    menuToggle.addEventListener('click', () => {
+        menuLinks.classList.toggle('active');
+    });
+</script>
 </body>
 </html>

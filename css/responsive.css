@@ -1,0 +1,121 @@
+/* Media Queries para Telas Menores que 768px (Tablets e Smartphones) */
+@media screen and (max-width: 768px) {
+    /* Header e Navegação */
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .logo {
+        max-width: 50%;
+        margin-bottom: 10px;
+    }
+
+    .logo img {
+        width: 50%;
+    }
+
+    nav {
+        width: 100%;
+        text-align: left;
+    }
+
+    .menu-links {
+        display: none; /* Esconde o menu de navegação por padrão */
+        flex-direction: column;
+        width: 100%;
+        background-color: lightgray;
+        padding: 10px 0;
+    }
+
+    .menu-links.active {
+        display: flex; /* Mostra o menu quando a classe 'active' é adicionada via JS */
+    }
+
+    .menu-links a {
+        padding: 10px 15px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    /* Botão do Hamburguer (o HTML deve ser adicionado) */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 2em;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        z-index: 1001;
+    }
+
+    /* Seções principais */
+    .secao {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+        max-height: none;
+    }
+
+    .secao .imagem-secao {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .secao .imagem-secao img {
+        width: 90%;
+        max-width: none;
+        height: auto;
+    }
+
+    .secao .text {
+        width: 100%;
+    }
+}
+
+/* Media Queries para Telas Menores que 600px (Smartphones) */
+@media screen and (max-width: 600px) {
+    .destaque-container {
+        width: 90%;
+    }
+
+    .destaque-container h1 {
+        font-size: 2em;
+    }
+
+    /* Tarifas - Tabela Responsiva */
+    .apartamentos table, .quartos table {
+        display: block;
+        width: 100%;
+        border: none;
+    }
+
+    .apartamentos thead, .quartos thead {
+        display: none;
+    }
+
+    .apartamentos tbody, .quartos tbody {
+        display: block;
+    }
+
+    .apartamentos tr, .quartos tr {
+        display: block;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+    }
+
+    .apartamentos td, .quartos td {
+        display: block;
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .apartamentos td::before, .quartos td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+    }
+}
