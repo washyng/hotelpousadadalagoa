@@ -77,16 +77,78 @@
     .secao .text {
         width: 100%;
     }
+
+    /* Rodapé */
+    .rodape {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .rodape-logo {
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+
+    .rodape-logo img {
+        width: 150px;
+    }
+
+    .redes-sociais {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .redes-sociais a {
+        margin: 5px 0;
+    }
+
+    .informacoes {
+        text-align: center;
+    }
 }
 
-/* Media Queries para Telas Menores que 600px (Smartphones) */
-@media screen and (max-width: 600px) {
+/* Media Queries para Telas Menores que 480px (Smartphones) */
+@media screen and (max-width: 480px) {
     .destaque-container {
         width: 90%;
     }
 
     .destaque-container h1 {
         font-size: 2em;
+    }
+
+    /* Rodapé */
+    .rodape {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .rodape-logo {
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+
+    .rodape-logo img {
+        width: 150px;
+    }
+
+    .redes-sociais {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .redes-sociais a {
+        margin: 5px 0;
+    }
+
+    .informacoes {
+        text-align: center;
     }
 
     /* Tarifas - Tabela Responsiva */
@@ -124,25 +186,4 @@
         left: 10px;
         font-weight: bold;
     }
-    .rodape{
-        display: block;
-        margin: 0 auto;
-    }
-    .rodape-main{
-        display: block;
-        margin: 0 auto;
-    }
-    .rodape-logo{
-        width: 80%;
-    }
-    .rodape-main h3{
-        width: 99%;
-        text-align: center;
-    }
-    .rodape-main p{
-        width: 99%;
-        text-align: center;
-    }
-
-
 }
