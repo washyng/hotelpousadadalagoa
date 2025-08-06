@@ -1,4 +1,25 @@
-/* CorreÃ§Ã£o Global para Rolagem Horizontal */
+
+/* Regras globais para evitar espaÃ§o extra entre header e destaque */
+.menu {
+    margin-bottom: 0;
+}
+
+.destaque {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.destaque-container h1,
+.destaque-container p {
+    margin-top: 0;
+}
+
+/* EspaÃ§amento nos parÃ¡grafos dentro das seÃ§Ãµes */
+.secao p {
+    padding: 0 15px;
+}
+
+/* CorreÃƒÂ§ÃƒÂ£o Global para Rolagem Horizontal */
 html, body {
     overflow-x: hidden;
 }
@@ -8,24 +29,24 @@ img, iframe {
     height: auto;
 }
 
-/* Garante que o padding e a borda sejam incluÃ­dos na largura e altura do elemento */
+/* Garante que o padding e a borda sejam incluÃƒÂ­dos na largura e altura do elemento */
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
-/* Oculta o botÃ£o do menu hambÃºrguer por padrÃ£o em todas as telas */
+/* Oculta o botÃƒÂ£o do menu hambÃƒÂºrguer por padrÃƒÂ£o em todas as telas */
 .menu-toggle {
     display: none;
 }
 
 /* Media Queries para Telas Menores que 768px (Tablets e Smartphones) */
 
-/* EspaÃ§amento nos parÃ¡grafos dentro das seÃ§Ãµes */
+/* EspaÃƒÂ§amento nos parÃƒÂ¡grafos dentro das seÃƒÂ§ÃƒÂµes */
 .secao p {
     padding: 0 15px;
 }
 @media screen and (max-width: 768px) {
-    /* Exibe o botÃ£o do menu hambÃºrguer apenas em telas pequenas */
+    /* Exibe o botÃƒÂ£o do menu hambÃƒÂºrguer apenas em telas pequenas */
     .menu-toggle {
         display: block;
         cursor: pointer;
@@ -36,7 +57,7 @@ img, iframe {
         z-index: 1001;
     }
 
-    /* Esconde o menu de navegaÃ§Ã£o por padrÃ£o */
+    /* Esconde o menu de navegaÃƒÂ§ÃƒÂ£o por padrÃƒÂ£o */
     .menu-links {
         display: none;
         flex-direction: column;
@@ -45,7 +66,7 @@ img, iframe {
         padding: 10px 0;
     }
 
-    /* Mostra o menu quando a classe 'active' Ã© adicionada via JS */
+    /* Mostra o menu quando a classe 'active' ÃƒÂ© adicionada via JS */
     .menu-links.active {
         display: flex;
     }
@@ -54,7 +75,7 @@ img, iframe {
         flex-direction: column;
         align-items: flex-start;
         padding: 15px;
-        margin-bottom: 0; /* Remove espaÃ§o extra */
+        margin-bottom: 0; /* Remove espaÃƒÂ§o extra */
     }
 
     .logo {
@@ -76,7 +97,7 @@ img, iframe {
         border-bottom: 1px solid #ccc;
     }
 
-    /* SeÃ§Ãµes principais */
+    /* SeÃƒÂ§ÃƒÂµes principais */
     .secao {
         flex-direction: column;
         text-align: center;
@@ -105,7 +126,7 @@ img, iframe {
         padding-top: 0;
     }
 
-    /* RodapÃ© */
+    /* RodapÃƒÂ© */
     .rodape-main {
         display: flex;
         flex-direction: column;
@@ -128,7 +149,7 @@ img, iframe {
         justify-content: center;
         gap: 10px;
     }
-    /* Remove qualquer espaço entre menu e destaque */
+    /* Remove qualquer espaÃ§o entre menu e destaque */
     .menu {
         margin-bottom: 0;
     }
@@ -154,7 +175,7 @@ img, iframe {
         font-size: 2em;
     }
 
-    /* RodapÃ© */
+    /* RodapÃƒÂ© */
     .rodape-main {
         flex-direction: column;
     }
@@ -211,7 +232,7 @@ img, iframe {
         left: 10px;
         font-weight: bold;
     }
-    /* Remove qualquer espaço entre menu e destaque */
+    /* Remove qualquer espaÃ§o entre menu e destaque */
     .menu {
         margin-bottom: 0;
     }
