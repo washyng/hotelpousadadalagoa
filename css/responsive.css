@@ -1,22 +1,42 @@
-/* Oculta o botão do menu hambúrguer por padrão em todas as telas */
+/* CorreÃ§Ã£o Global para Rolagem Horizontal */
+html, body {
+    overflow-x: hidden;
+}
+
+img, iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Garante que o padding e a borda sejam incluÃ­dos na largura e altura do elemento */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Oculta o botÃ£o do menu hambÃºrguer por padrÃ£o em todas as telas */
 .menu-toggle {
     display: none;
 }
 
 /* Media Queries para Telas Menores que 768px (Tablets e Smartphones) */
+
+/* EspaÃ§amento nos parÃ¡grafos dentro das seÃ§Ãµes */
+.secao p {
+    padding: 0 15px;
+}
 @media screen and (max-width: 768px) {
-    /* Exibe o botão do menu hambúrguer apenas em telas pequenas */
+    /* Exibe o botÃ£o do menu hambÃºrguer apenas em telas pequenas */
     .menu-toggle {
         display: block;
         cursor: pointer;
         font-size: 2em;
         position: absolute;
-        top: 25px;
-        right: 25px;
+        top: 15px;
+        right: 20px;
         z-index: 1001;
     }
 
-    /* Esconde o menu de navegação por padrão */
+    /* Esconde o menu de navegaÃ§Ã£o por padrÃ£o */
     .menu-links {
         display: none;
         flex-direction: column;
@@ -25,7 +45,7 @@
         padding: 10px 0;
     }
 
-    /* Mostra o menu quando a classe 'active' é adicionada via JS */
+    /* Mostra o menu quando a classe 'active' Ã© adicionada via JS */
     .menu-links.active {
         display: flex;
     }
@@ -34,6 +54,7 @@
         flex-direction: column;
         align-items: flex-start;
         padding: 15px;
+        margin-bottom: 0; /* Remove espaÃ§o extra */
     }
 
     .logo {
@@ -55,7 +76,7 @@
         border-bottom: 1px solid #ccc;
     }
 
-    /* Seções principais */
+    /* SeÃ§Ãµes principais */
     .secao {
         flex-direction: column;
         text-align: center;
@@ -78,36 +99,49 @@
         width: 100%;
     }
 
-    /* Rodapé */
-    .rodape {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 20px;
+    /* Destaque */
+    .destaque {
+        margin-top: 0;
+        padding-top: 0;
     }
 
-    .rodape-logo {
+    /* RodapÃ© */
+    .rodape-main {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        text-align: center;
+    }
+
+    .rodape-logo, .rodape-hotel, .rodape-rede-social {
+        width: 100%;
         margin-bottom: 20px;
-        max-width: 100%;
     }
 
     .rodape-logo img {
         width: 150px;
     }
 
-    .redes-sociais {
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 20px;
+    .rodape-rede-social {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
+    /* Remove qualquer espaço entre menu e destaque */
+    .menu {
+        margin-bottom: 0;
     }
 
-    .redes-sociais a {
-        margin: 5px 0;
+    .destaque {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
     }
 
-    .informacoes {
-        text-align: center;
+    .destaque-container h1 {
+        margin-top: 0;
     }
+
 }
 
 /* Media Queries para Telas Menores que 480px (Smartphones) */
@@ -120,35 +154,26 @@
         font-size: 2em;
     }
 
-    /* Rodapé */
-    .rodape {
+    /* RodapÃ© */
+    .rodape-main {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 20px;
     }
 
-    .rodape-logo {
+    .rodape-logo, .rodape-hotel, .rodape-rede-social {
+        width: 100%;
         margin-bottom: 20px;
-        max-width: 100%;
+        text-align: center;
     }
 
     .rodape-logo img {
         width: 150px;
     }
 
-    .redes-sociais {
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 20px;
-    }
-
-    .redes-sociais a {
-        margin: 5px 0;
-    }
-
-    .informacoes {
-        text-align: center;
+    .rodape-rede-social {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
     }
 
     /* Tarifas - Tabela Responsiva */
@@ -186,4 +211,18 @@
         left: 10px;
         font-weight: bold;
     }
+    /* Remove qualquer espaço entre menu e destaque */
+    .menu {
+        margin-bottom: 0;
+    }
+
+    .destaque {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    .destaque-container h1 {
+        margin-top: 0;
+    }
+
 }
