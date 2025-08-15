@@ -33,7 +33,12 @@
     </header>
 
     <main>
+
         <section>
+            <div class="text-titulo">
+                <h1>Faca já a sua Reserva </h1>
+                <p>E venha desfrutar da melhor experiência junto a natureza.</p>
+            </div>
             <div class="local">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1014.0588077936663!2d-44.54463776596715!3d-19.137039302249182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa7c8a91b02aee7%3A0xdf45958fce7256e3!2sHotel%20e%20Pousada%20da%20Lagoa!5e0!3m2!1spt-BR!2sbr!4v1750115590194!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
@@ -47,6 +52,12 @@
 
                 <label for="email">E-mail</label><br>
                 <input type="email" id="email">
+
+                <label for="data">Data Chek-in</label>
+                <input type="datetime-local">
+               
+                <label for="data">Data Chek-out</label>
+                <input type="datetime-local">
 
                 <label for="mensagem">Mensagem</label><br>
                 <textarea id="mensagem"></textarea><br>
@@ -78,12 +89,12 @@
         </div>
     </footer>
     <script src="/js/script.js">
-    const menuToggle = document.querySelector('.menu-toggle');
-    const menuLinks = document.querySelector('.menu-links');
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menuLinks = document.querySelector('.menu-links');
 
-    menuToggle.addEventListener('click', () => {
-        menuLinks.classList.toggle('active');
-    });
+        menuToggle.addEventListener('click', () => {
+            menuLinks.classList.toggle('active');
+        });
     </script>
 </body>
 </html>

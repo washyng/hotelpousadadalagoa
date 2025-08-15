@@ -17,10 +17,28 @@ main section {
 main section:last-child {
     border-bottom: none;
 }
+.acomodacao{
+    display: flex;
+    flex-wrap: wrap;
+}
+.acomodacao-tipo{
+    display: inline;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+}
+.acomodacao-opcoes ul{
+    width: 100%;
+    display: flex;
+    padding: 30px;
+    gap: 55px;
+}
 .acomodacao img {
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     border-radius: 8px;
+    box-shadow: 1px 4px 7px black;
     margin-right: 20px;
 }
 main section div:nth-child(2) {

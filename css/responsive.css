@@ -12,6 +12,7 @@
 .destaque-container h1,
 .destaque-container p {
     margin-top: 0;
+    font-size: 1.5em;
 }
 
 /* EspaÃ§amento nos parÃ¡grafos dentro das seÃ§Ãµes */

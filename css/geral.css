@@ -50,7 +50,7 @@ nav{
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 0; /* ComeÃ§a com largura zero */
+    width: 0;
     height: 2px;
     background-color: #fcfcfc; /* Cor da barra */
     transition: width 0.3s ease; /* TransiÃ§Ã£o suave */
@@ -65,17 +65,16 @@ nav{
     background-position: center;
     background-size: cover;
     height: 800px;
-    /* Removido o margin-top de 100px, pois jÃ¡ estÃ¡ no body */
 }
 .destaque::after{
     content: '';
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.412);
     position: absolute;
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
-    opacity: .6;
+    opacity: 0.3;
     z-index: 1;
 }
 .destaque-container{
@@ -87,7 +86,7 @@ nav{
     height: 100%;
     margin: 0 auto;
     width: 70%;
-    color: white;
+    color: rgb(255, 255, 255);
     z-index: 2;
 }
 
@@ -99,7 +98,7 @@ nav{
     border: 1px solid black;
 }
 .destaque-container h1:hover{
-    zoom: 1.2;
+    zoom: 1.1;
     -ms-zoom-animation: 1.2;
     animation-duration: 10s;
 }
@@ -123,18 +122,34 @@ nav{
 .imagem-secao img{
     transition: transform 0.3s ease; /* TransiÃ§Ã£o suave de 0.3 segundos */
     max-width: 450px;/* A imagem ocupa 100% da largura da div */
+    padding: 3px;
+    box-shadow: 0 4px 8px black;
+    border-radius: 8px;
+}
+.imagem-secao iframe{
+    transition: transform 0.3s ease; /* TransiÃ§Ã£o suave de 0.3 segundos */
+    max-width: 450px;/* A imagem ocupa 100% da largura da div */
+    padding: 3px;
+    box-shadow: 0 4px 8px black;
+    border-radius: 8px;
 }
 .imagem-secao img:hover{
-    transform: scale(1.02);
+    transform: scale(1.03);
+}
+.imagem-secao iframe:hover{
+    transform: scale(1.03);
 }
 div img{
     max-width: 450px;
-    padding-right: 20px;
+    padding: 3px;
     overflow: hidden;
 }
 div iframe{
-    max-width: 450px;
-    padding-right: 20px;
+    width: 450px;
+    height: 350px;
+    padding: 2px;
+    overflow: hidden;
+    margin-bottom: 20px;
 }
 
 .text{
@@ -152,7 +167,7 @@ div iframe{
     text-align: justify;
     line-height: 2em;
     font-size: 18px;
-    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .text a{
@@ -160,10 +175,12 @@ div iframe{
     padding: 10px;
     font-size: 20px;
     text-decoration: none;
+    margin: 20px 0 0 15px;
+    border-radius: 8px;
 }
 .text a:hover{
     background-color: darkgreen;
-    padding: 5px;
+    padding: 10px;
     color: white;
 }
 

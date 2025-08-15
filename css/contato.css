@@ -1,5 +1,17 @@
-
-
+main{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    align-items: center;
+    margin-top: 50px;
+    justify-content: center;
+}
+.text-titulo h1{
+    padding: 10px 10px 0 20px;
+}
+.text-titulo p{
+    padding: 10px 10px 0px 20px;
+}
 /* contato.css */
 .local {
     text-align: center;

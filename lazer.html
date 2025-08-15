@@ -110,5 +110,13 @@
             <p>&copy; 2025 Hotel Pousada da Lagoa. Todos os direitos reservados. Desenvolvido por devLoopz</p>
         </div>
     </footer>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menuLinks = document.querySelector('.menu-links');
+
+        menuToggle.addEventListener('click', () => {
+            menuLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
