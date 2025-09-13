@@ -1,9 +1,27 @@
 main section {
     padding: 20px;
-    max-width: 900px;
+    max-width: 1024px;
     margin: 20px auto;
 }
-/* lazer.css */
+
+.secao-texto{
+    margin-top: 110px;
+
+}
+
+.secao-texto h1{
+    text-align: center;
+    padding: 20px;
+}
+
+.secao-texto p{
+    font-size: 1.2em;
+    line-height: 1.5em;
+    padding: 25px;
+    text-align: justify;
+}
+/*
+/* lazer.css 
 .cards-lazer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -12,19 +30,13 @@ main section {
     max-width: 1200px;
     margin: 0 auto;
 }
-.cards-lazer img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
+
 .cards-lazer img:hover {
     transform: scale(1.05);
-}
+}*/
 main section:nth-child(2) {
     padding: 20px;
-    max-width: 1200px;
+    max-width: 1024px;
     margin: 0 auto;
 }
 main section:nth-child(2) ul {
@@ -41,8 +53,77 @@ main section:nth-child(2) li {
     border-radius: 5px;
 }
 
+
 @media (max-width: 768px) {
     .cards-lazer {
         grid-template-columns: 1fr;
     }
+}
+
+/* Adicione este código ao seu arquivo lazer.css */
+.cards-lazer {
+    /* Utiliza o Flexbox para o contêiner */
+    display: flex;
+    flex-wrap: wrap;
+    
+    /* Espaço entre as imagens */
+    gap: 10px;
+    
+    /* A largura da galeria será 100% da sua seção pai */
+    width: 100%;
+    
+    /* Adiciona margem na parte superior */
+    margin-top: 20px;
+}
+
+.cards-lazer img {
+    /* Define a largura base de cada imagem */
+    flex-basis: 25%; 
+
+    /* Permite que a imagem cresça para preencher o espaço restante */
+    flex-grow: 1;
+
+    /* A altura se ajustará automaticamente para manter a proporção */
+    height: auto;
+    
+    /* Efeito de transição suave ao passar o mouse */
+    transition: transform 0.3s ease-in-out;
+}
+.cards-lazer img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+.cards-lazer img:hover {
+    /* Efeito de zoom ao passar o mouse sobre a imagem */
+    transform: scale(1.05);
+}
+
+/* Classes para mostrar e esconder as seções */
+.oculto {
+    display: none;
+}
+
+#imagem-principal-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#imagem-lazer-principal {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.5s ease-in-out;
+}
+
+#ver-todas-imagens-link {
+    display: block; /* Garante que o link fique em uma nova linha */
+    margin-top: 10px;
+    font-size: 1em;
+    color: #007bff;
+    text-decoration: underline;
+    cursor: pointer;
 }

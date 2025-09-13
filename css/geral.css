@@ -7,13 +7,10 @@
     /* Remover scroll-padding-top pois o body jÃ¡ terÃ¡ o margin-top */
 }
 
-/* Adicionando um margin-top ao body para evitar que o conteÃºdo seja coberto pelo menu fixo */
+
+/* Adicionando um margin-top ao body para evitar que o conteudo seja coberto pelo menu fixo */
 body {
     margin-top: 0;
-}
-
-main {
-    padding-top: 100px; /* compensa altura do menu fixo */
 }
 
 .menu{
@@ -59,55 +56,6 @@ nav{
     width: 100%;
 }
 
-.destaque{
-    background-image: url('/assets/foto/hotel/1.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 800px;
-}
-.destaque::after{
-    content: '';
-    background-color: rgba(255, 255, 255, 0.412);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    opacity: 0.3;
-    z-index: 1;
-}
-.destaque-container{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    margin: 0 auto;
-    width: 70%;
-    color: rgb(255, 255, 255);
-    z-index: 2;
-}
-
-.destaque-container h1{
-    padding: 20px;
-    text-align: center;
-    font-size: 3em;
-    text-shadow: 2px 3px 5px rgb(185, 185, 185);
-}
-.destaque-container h1:hover{
-    zoom: 1.1;
-    -ms-zoom-animation: 1.2;
-    animation-duration: 10s;
-}
-
-.destaque-container p{
-    padding: 20px;
-    text-align: center;
-    font-size: 1.5em;
-    text-shadow: 1px 3px 3px black;
-}
 
 .secao{
     max-width: 1024px;
@@ -190,6 +138,7 @@ div iframe{
     padding: 10px;
     background-color: lightgray;
     align-items: center; /* Para centralizar todos os itens */
+    box-shadow: 0 -2px 5px rgba(42, 105, 52, 0.585);
 }
 
 /* Novo estilo para o container principal do rodapÃ© */
@@ -231,7 +180,7 @@ div iframe{
     text-align: center;
 }
 .rodape-rede-social a img{
-    width: 65px;
+    width: 47px;
 }
 .rodape-rede-social a img:hover{
     zoom: 1.1;
@@ -270,8 +219,3 @@ div iframe{
     
 }
 
-
-/* Remove espaÃ§o extra no desktop entre o menu fixo e a seÃ§Ã£o destaque */
-main .destaque {
-    margin-top: -30px;
-}
