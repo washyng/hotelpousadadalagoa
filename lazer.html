@@ -32,62 +32,53 @@
     </header>
 
     <main>
-        <section>
+        <section class="secao-texto">
             <h1>Área de Lazer</h1>
             <p>No Hotel Pousada da Lagoa você conta com uma área de lazer bem diversificada!</p>
         </section>
+    <section>
+    
+        <ul id="lista-lazer">
+            <li id="todas-fotos-link">Todas as fotos</li>
+            
+        <li data-imagem="assets/foto/lazer/piscina01.jpg">Piscina</li>
+        <li data-imagem="assets/foto/lazer/aquatico02.jpg">Pista de caminhada</li>
+        <li data-imagem="assets/foto/lazer/1.jpg">Pista de bicicross</li>
+        <li data-imagem="assets/foto/lazer/2.jpg">Passeio a cavalo</li>
+        <li data-imagem="assets/foto/lazer/3.jpg">Área de recreação</li>
+        <li data-imagem="assets/foto/lazer/4.jpg">Passeio de charrete</li>
+        <li data-imagem="assets/foto/lazer/5.jpg">Espaço Kids</li>
+        <li data-imagem="assets/foto/lazer/6.jpg">DVDOkê</li>
+        <li data-imagem="assets/foto/lazer/7.jpg">Campo de futebol (um de areia e outro gramado)</li>
+        <li data-imagem="assets/foto/lazer/8.jpg">Sinuca</li>
+        <li data-imagem="assets/foto/lazer/9.jpg">Totó</li>
+        <li data-imagem="assets/foto/lazer/10.jpg">Academia</li>
+        <li data-imagem="assets/foto/lazer/11.jpg">Pomar</li>
+    </ul>
 
-        <section>
-            <p>
-            Piscina, Pista de caminhada, Pista de bicicross, Passeio a cavalo, Área de recreação, Passeio de charrete, Espaço Kids.
-            </p>
-            <p>
-            DVDOkê, Campo de futebol (um de areia e outro gramado), Sinuca, Totó, Academia e um Pomar.
-            </p>
-        </section>
-        <section>
-            <div class="cards-lazer">
-                <img src="assets/foto/lazer/1.jpg" alt="Vista da piscina">
-                <img src="assets/foto/lazer/2.jpg" alt="Detalhe da piscina">
-                <img src="assets/foto/lazer/3.jpg" alt="Área de descanso na piscina">
-                <img src="assets/foto/lazer/4.jpg" alt="Quadra de esportes">
-                <img src="assets/foto/lazer/5.jpg" alt="Jardim com rede">
-                <img src="assets/foto/lazer/6.jpg" alt="Vista da natureza">
-                <img src="assets/foto/lazer/7.jpg" alt="Área de recreação">
-                <img src="assets/foto/lazer/8.jpg" alt="Bar na piscina">
-                <img src="assets/foto/lazer/9.jpg" alt="Outra vista da quadra">
-                <img src="assets/foto/lazer/10.jpg" alt="Área de churrasco">
-                <img src="assets/foto/lazer/11.jpg" alt="Playground">
-                <img src="assets/foto/lazer/12.jpg" alt="Tênis de mesa">
-                <img src="assets/foto/lazer/13.jpg" alt="Sala de jogos">
-                <img src="assets/foto/lazer/14.jpg" alt="Mesa de sinuca">
-                <img src="assets/foto/lazer/15.jpg" alt="Quadra de vôlei">
-                <img src="assets/foto/lazer/aquatico02.jpg" alt="Piscina com escorregador">
-                <img src="assets/foto/lazer/aquatico03.jpg" alt="Piscina infantil">
-                <img src="assets/foto/lazer/lareira01.jpg" alt="Lareira">
-                <img src="assets/foto/lazer/parque01.jpg" alt="Parque infantil">
-                <img src="assets/foto/lazer/parque02.jpg" alt="Outro parque infantil">
-                <img src="assets/foto/lazer/piscina01.jpg" alt="Piscina principal">
-            </div>
-        </section>
+</section> 
 
-        <section>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </section>
+<section id="imagem-principal-container" class="oculto">
+    <img id="imagem-lazer-principal" src="" alt="Imagem em destaque">
+</section>
+
+<section id="galeria-completa">
+    <div class="cards-lazer">
+        <img src="assets/foto/lazer/piscina01.jpg" alt="Piscina principal">
+        <img src="assets/foto/lazer/aquatico02.jpg" alt="Piscina com escorregador">
+        <img src="assets/foto/lazer/1.jpg" alt="Pista de bicicross">
+        <img src="assets/foto/lazer/2.jpg" alt="Passeio a cavalo">
+        <img src="assets/foto/lazer/3.jpg" alt="Área de recreação">
+        <img src="assets/foto/lazer/4.jpg" alt="Passeio de charrete">
+        <img src="assets/foto/lazer/5.jpg" alt="Espaço Kids">
+        <img src="assets/foto/lazer/6.jpg" alt="DVDOkê">
+        <img src="assets/foto/lazer/7.jpg" alt="Campo de futebol">
+        <img src="assets/foto/lazer/8.jpg" alt="Sinuca">
+        <img src="assets/foto/lazer/9.jpg" alt="Totó">
+        <img src="assets/foto/lazer/10.jpg" alt="Academia">
+        <img src="assets/foto/lazer/11.jpg" alt="Pomar">
+    </div>
+</section>
     </main>
 
      <footer class="rodape">
@@ -110,7 +101,7 @@
             <p>&copy; 2025 Hotel Pousada da Lagoa. Todos os direitos reservados. Desenvolvido por devLoopz</p>
         </div>
     </footer>
-    <script>
+    <script src="/js/lazer.js">
         const menuToggle = document.querySelector('.menu-toggle');
         const menuLinks = document.querySelector('.menu-links');
 

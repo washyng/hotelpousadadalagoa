@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="import" href="assets/fonts/amazon.ttf">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/geral.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/lazer.css">
+    <title>Hotel Pousada da Lagoas - Lazer</title>
+</head>
+<body>
+    <header class="menu">
+        <div class="logo">
+            <img src="assets/img/logo_nova.jpg" alt="Logo Hotel Pousada da Lagoa">
+        </div>
+        <nav>
+            <div class="menu-links">
+                <a href="index.html"> Principal </a>
+                <a href="index.html#hotel"> O Hotel </a>
+                <a href="index.html#acomodacoes"> Acomodações</a>
+                <a href="index.html#lazer"> Lazer </a>
+                <a href="index.html#restaurante"> Restaurante</a>
+                <a href="index.html#tarifas"> Tarifas </a>
+                <a href="index.html#contato"> Contatos </a>
+            </div>
+        </nav>
+        <button class="menu-toggle" aria-label="Toggle navigation"> &#9776; </button>
+    </header>
+
+    <main>
+        <section>
+            <h1>Área de Lazer</h1>
+            <p>No Hotel Pousada da Lagoa você conta com uma área de lazer bem diversificada!</p>
+        </section>
+
+        <!-- Botões de filtro -->
+        <section class="filtros-lazer">
+            <button data-filter="all">Todas</button>
+            <button data-filter="piscina">Piscina</button>
+            <button data-filter="quadra">Quadra</button>
+            <button data-filter="parque">Parque</button>
+            <button data-filter="jogos">Jogos</button>
+            <button data-filter="natureza">Natureza</button>
+            <button data-filter="recreacao">Recreação</button>
+        </section>
+
+        <!-- Galeria -->
+        <section>
+            <div class="cards-lazer">
+                <img src="assets/foto/lazer/1.jpg" alt="Vista da piscina" data-category="piscina">
+                <img src="assets/foto/lazer/2.jpg" alt="Detalhe da piscina" data-category="piscina">
+                <img src="assets/foto/lazer/3.jpg" alt="Área de descanso na piscina" data-category="piscina">
+                <img src="assets/foto/lazer/4.jpg" alt="Quadra de esportes" data-category="quadra">
+                <img src="assets/foto/lazer/5.jpg" alt="Jardim com rede" data-category="natureza">
+                <img src="assets/foto/lazer/6.jpg" alt="Vista da natureza" data-category="natureza">
+                <img src="assets/foto/lazer/7.jpg" alt="Área de recreação" data-category="recreacao">
+                <img src="assets/foto/lazer/8.jpg" alt="Bar na piscina" data-category="piscina">
+                <img src="assets/foto/lazer/9.jpg" alt="Outra vista da quadra" data-category="quadra">
+                <img src="assets/foto/lazer/10.jpg" alt="Área de churrasco" data-category="recreacao">
+                <img src="assets/foto/lazer/11.jpg" alt="Playground" data-category="recreacao">
+                <img src="assets/foto/lazer/12.jpg" alt="Tênis de mesa" data-category="jogos">
+                <img src="assets/foto/lazer/13.jpg" alt="Sala de jogos" data-category="jogos">
+                <img src="assets/foto/lazer/14.jpg" alt="Mesa de sinuca" data-category="jogos">
+                <img src="assets/foto/lazer/15.jpg" alt="Quadra de vôlei" data-category="quadra">
+                <img src="assets/foto/lazer/aquatico02.jpg" alt="Piscina com escorregador" data-category="piscina">
+                <img src="assets/foto/lazer/aquatico03.jpg" alt="Piscina infantil" data-category="piscina">
+                <img src="assets/foto/lazer/lareira01.jpg" alt="Lareira" data-category="recreacao">
+                <img src="assets/foto/lazer/parque01.jpg" alt="Parque infantil" data-category="parque">
+                <img src="assets/foto/lazer/parque02.jpg" alt="Outro parque infantil" data-category="parque">
+                <img src="assets/foto/lazer/piscina01.jpg" alt="Piscina principal" data-category="piscina">
+            </div>
+        </section>
+    </main>
+
+     <footer class="rodape">
+        <div class="rodape-main">
+            <div class="rodape-logo">
+                <img src="assets/img/logo_nova.jpg" alt="Logo Hotel Pousada da Lagoa">
+            </div>
+            <div class="rodape-hotel">
+                <h3>Hotel Pousada da Lagoa</h3>
+                <p><strong>Endereço:</strong> BR 135. KM 666. Distrito JK - Curvelo/MG</p>
+                <p><strong>Email:</strong> hoteldalagoa@hotmail.com</p>
+                <p><strong>Telefones: </strong>(38) 3723-9288 / (38) 9 8826-9793 / (38) 9 9944-5752</p>
+            </div>
+            <div class="rodape-rede-social">
+                <a href="https://www.instagram.com/hotelpousadadalagoa/" target="_blank" rel="noopener noreferrer"><img src="assets/icon/instagram.png" alt="Instagram"></a>
+                <a href="https://wa.me/5538988269793" target="_blank" rel="noopener noreferrer"><img src="assets/icon/whatsapp.png" alt="Whatsapp"></a>
+            </div>
+        </div>
+         <div class="rodape-corporate">
+            <p>&copy; 2025 Hotel Pousada da Lagoa. Todos os direitos reservados. Desenvolvido por devLoopz</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menuLinks = document.querySelector('.menu-links');
+
+        menuToggle.addEventListener('click', () => {
+            menuLinks.classList.toggle('active');
+        });
+
+        const filtroBotoes = document.querySelectorAll('.filtros-lazer button');
+        const imagens = document.querySelectorAll('.cards-lazer img');
+
+        filtroBotoes.forEach(botao => {
+            botao.addEventListener('click', () => {
+                const categoria = botao.getAttribute('data-filter');
+
+                imagens.forEach(img => {
+                    if (categoria === 'all' || img.dataset.category === categoria) {
+                        img.style.display = 'block';
+                    } else {
+                        img.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
