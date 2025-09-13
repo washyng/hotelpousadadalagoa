@@ -4,13 +4,7 @@
     box-sizing: border-box;
     font-family: 'Josefin Sans';
     position: relative;
-    /* Remover scroll-padding-top pois o body jÃ¡ terÃ¡ o margin-top */
-}
-
-
-/* Adicionando um margin-top ao body para evitar que o conteudo seja coberto pelo menu fixo */
-body {
-    margin-top: 0;
+    scroll-padding-top: 123px; 
 }
 
 .menu{
@@ -21,7 +15,7 @@ body {
     position: fixed;
     background-color: lightgray;
     z-index: 1000;
-    top: 0;
+    height: 123px;
     box-shadow: 0 2px 5px rgba(42, 105, 52, 0.585);
 }
 .logo{
@@ -61,10 +55,16 @@ nav{
     max-width: 1024px;
     max-height: 700px;
     display: flex;
-    /*margin-bottom: 30px;*/
+    padding: 20px;
     margin: 0 auto;
-    padding-top: 50px;
 }
+
+.fundo:nth-of-type(odd) {
+
+    background-color: #dad8d836; /* Cor para seções ímpares */
+}
+
+
 
 .imagem-secao img{
     transition: transform 0.3s ease; /* TransiÃ§Ã£o suave de 0.3 segundos */
