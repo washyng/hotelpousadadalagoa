@@ -95,7 +95,6 @@ nav{
     text-align: center;
     font-size: 3em;
     text-shadow: 2px 3px 5px rgb(185, 185, 185);
-    border: 1px solid black;
 }
 .destaque-container h1:hover{
     zoom: 1.1;
