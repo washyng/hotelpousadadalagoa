@@ -57,6 +57,18 @@ tr:hover {
     table, thead, tbody, th, td, tr {
         display: block;
     }
+    caption.tab-titulo {
+    text-align: center;
+    caption-side: top;
+    font-size: 1.4em;
+    background-color: rgba(0, 128, 0, 0.798);
+    color: white;
+    padding: 15px;
+    display: inline-block !important;/* padrão, mas pode reforçar */
+    width: 100%; /* força ocupar toda a largura da tabela */
+    box-sizing: border-box; /* inclui padding na largura total */
+    }
+    
     thead tr {
         position: absolute;
         top: -9999px;
@@ -72,6 +84,7 @@ tr:hover {
         padding-left: 50%;
         text-align: right;
     }
+
     td:before {
         content: attr(data-label);
         position: absolute;

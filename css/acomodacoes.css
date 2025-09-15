@@ -64,4 +64,20 @@ main section div ul li {
     .acomodacao img {
         margin: 0 0 20px 0;
     }
+    .acomodacao-opcoes ul {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    main section div:nth-child(2) {
+        font-size: 1.2em;
+    }
+    .acomodacao-opcoes ul {
+        padding: 0;
+        gap: 10px;
+    }
 }

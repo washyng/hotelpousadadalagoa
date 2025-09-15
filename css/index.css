@@ -34,8 +34,8 @@
     text-shadow: 2px 3px 5px rgb(185, 185, 185);
 }
 .destaque-container h1:hover{
-    zoom: 1.2;
-    -ms-zoom-animation: 1.2;
+    zoom: 1.1;
+    -ms-zoom-animation: 1.1;
     animation-duration: 10s;
 }
 .destaque-container p{
@@ -43,6 +43,7 @@
     text-align: center;
     font-size: 1.5em;
     text-shadow: 1px 3px 3px black;
+    line-height: 1.5em;
 }
 
 @media (max-width: 768px) {

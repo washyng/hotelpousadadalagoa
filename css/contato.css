@@ -1,12 +1,19 @@
 
 main{
     display: flex;
+    flex-wrap: wrap;
     width: 80%;
     margin: 0 auto;
     align-items: center;
     margin-top: 50px;
     justify-content: center;
     padding-top: 130px;
+}
+
+.titulo{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
 }
 .text-titulo h1{
     padding: 10px 10px 0 20px;
@@ -15,9 +22,12 @@ main{
     padding: 10px 10px 0px 20px;
 }
 /* contato.css */
+.mapa {
+    width: 45%;
+    padding-top: 50px;
+}
 .local {
     text-align: center;
-    padding: 20px ;
 }
 .local iframe {
     max-width: 100%;
@@ -27,7 +37,7 @@ main{
             margin: 20px auto;
             border: 1px solid #ccc;
             background-color: #f9f9f9;
-            padding: 20px;
+            padding: 0px 20px 40px 20px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             height: 450px;
@@ -61,7 +71,7 @@ main{
             font-size: 1.2em;
             transition: background-color 0.3s ease;
         }
-        button:hover {
+        #formulario-whatsapp button:hover {
             background-color: darkgreen;
             color: white;
         }
@@ -69,5 +79,22 @@ main{
 @media (max-width: 768px) {
     .forms {
         padding: 15px;
+    }
+}
+@media (max-width: 480px) {
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    .mapa {
+        width: 100%;
+        padding: 0;
+    }
+    .forms {
+        width: 100%;
+        padding: 10px;
+    }
+    input, textarea {
+        width: 100%;
     }
 }
