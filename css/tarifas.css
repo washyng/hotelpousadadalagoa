@@ -1,101 +1,139 @@
-/* tarifas.css */
-main section {
-    padding: 20px;
-    max-width: 1024px;
-    margin: 20px auto;
-}
+/*
+ * Arquivo CSS para a página tarifas.html
+ */
 
-.secao-texto{
-    margin-top: 130px;
+/*
+ * Arquivo CSS para a página tarifas.html
+ */
 
-}
+.apartamentos,
 
-.secao-texto h1{
-    text-align: center;
-    padding: 20px;
-}
-
-.secao-texto p{
-    font-size: 1.2em;
-    line-height: 1.5em;
-    padding: 15px;
-    text-align: justify;
+.apartamentos,
+.quartos,
+.chales {
+    margin-bottom: 60px;
+    overflow-x: auto;
 }
 
 table {
     width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 30px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border-radius: 8px;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 20px 0;
+    box-shadow: var(--shadow-md);
+    background-color: #fff;
+    border-radius: var(--border-radius-md);
     overflow: hidden;
-}
-.tab-titulo{
-    padding: 15px;
-    text-align: center;
-    font-size: 1.4em;
-    background-color: rgba(0, 128, 0, 0.798);
-    color: white;
-}
-th, td {
-    padding: 15px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-}
-tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-tr:hover {
-    background-color: #c6eec9;
+    /* Para respeitar o border-radius */
 }
 
-@media (max-width: 768px) {
-    table, thead, tbody, th, td, tr {
+.tab-titulo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--cor-principal);
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.02);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-top-left-radius: var(--border-radius-md);
+    border-top-right-radius: var(--border-radius-md);
+}
+
+thead th {
+    background-color: var(--cor-principal);
+    color: var(--cor-texto-claro);
+    padding: 18px 20px;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+}
+
+tbody tr {
+    transition: background-color 0.2s;
+}
+
+tbody tr:hover {
+    background-color: rgba(0, 109, 119, 0.05);
+    /* Leve toque da cor principal */
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+
+tbody td {
+    padding: 15px 20px;
+    text-align: left;
+    color: var(--cor-texto);
+    border-bottom: 1px solid #eee;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Esconde os data-label em desktop */
+tbody td::before {
+    display: none;
+}
+
+/* Estilo para a tabela em telas menores (será ajustado no responsive.css) */
+@media screen and (max-width: 768px) {
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
         display: block;
     }
-    caption.tab-titulo {
-    text-align: center;
-    caption-side: top;
-    font-size: 1.4em;
-    background-color: rgba(0, 128, 0, 0.798);
-    color: white;
-    padding: 15px;
-    display: inline-block !important;/* padrão, mas pode reforçar */
-    width: 100%; /* força ocupar toda a largura da tabela */
-    box-sizing: border-box; /* inclui padding na largura total */
+
+    /* Ocultar cabeçalhos de tabela */
+    thead {
+        display: none;
     }
-    
-    thead tr {
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
-    }
-    tr {
-        border: 1px solid #ccc;
+
+    .tab-titulo {
+        display: block;
         margin-bottom: 10px;
-    }
-    td {
+        background: transparent;
         border: none;
+        text-align: left;
+        padding-left: 0;
+    }
+
+    tbody tr {
+        border: 1px solid #ddd;
+        margin-bottom: 20px;
+        border-radius: var(--border-radius-sm);
+        box-shadow: var(--shadow-sm);
+        background-color: #fff;
+    }
+
+    tbody td {
+        border: none;
+        border-bottom: 1px solid #eee;
         position: relative;
         padding-left: 50%;
         text-align: right;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    td:before {
-        content: attr(data-label);
-        position: absolute;
-        left: 0;
-        width: 45%;
-        padding-left: 15px;
-        font-weight: bold;
-        text-align: left;
+    tbody td:last-child {
+        border-bottom: none;
     }
-    td:nth-of-type(1):before { content: "Tipo"; }
-    td:nth-of-type(2):before { content: "Modalidade"; }
-    td:nth-of-type(3):before { content: "Valor"; }
-    td:nth-of-type(4):before { content: "Taxa Extra"; }
+
+    tbody td::before {
+        display: block;
+        font-weight: bold;
+        color: var(--cor-principal);
+        content: attr(data-label);
+        text-align: left;
+        flex: 1;
+    }
 }

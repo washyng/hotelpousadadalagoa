@@ -1,47 +1,28 @@
-main section {
-    padding: 20px;
-    max-width: 1024px;
-    margin: 20px auto;
-}
-.secao-texto{
-    margin-top: 110px;
+/*
+ * Arquivo CSS para a página restaurante.html
+ */
 
-}
+/*
+ * Arquivo CSS para a página restaurante.html
+ */
 
-.secao-texto h1{
-    text-align: center;
-    padding: 20px;
-}
-
-.secao-texto p{
-    font-size: 1.2em;
-    line-height: 1.5em;
-    padding: 15px;
-    text-align: justify;
-}
-
-/* restaurante.css */
 .galeria {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 15px;
-    padding: 20px;
-    max-width: 1024px;
-    margin: 0 auto;
-}
-.galeria img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-.galeria img:hover {
-    transform: scale(1.05);
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
 }
 
-@media (max-width: 768px) {
-    .galeria {
-        grid-template-columns: 1fr;
-    }
+.galeria img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transicao);
+}
+
+.galeria img:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-md);
 }

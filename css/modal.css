@@ -1,0 +1,276 @@
+/* Modal e Zoom de Imagens */
+img.imagem-secao {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    max-width: 100%;
+    height: auto;
+}
+
+img.imagem-secao:hover {
+    transform: scale(1.05);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    /* Z-index muito alto para garantir sobreposição */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    /* Garantir largura total da viewport */
+    height: 100vh;
+    /* Garantir altura total da viewport */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Opacidade ajustada para 0.7 (mais leve) */
+    /* Fundo mais escuro */
+    overflow: auto;
+    backdrop-filter: blur(5px);
+}
+
+
+.modal-content {
+    margin: 2% auto;
+    /* Um pouco mais perto do topo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+    width: 90%;
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2001;
+    transition: transform 0.3s ease;
+}
+
+.modal-close:hover {
+    transform: scale(1.2) rotate(90deg);
+    color: var(--cor-destaque);
+    /* Se disponível, senão #fff */
+}
+
+.modal img#modalImg {
+    width: 100%;
+    max-width: 800px;
+    /* Largura agradável em desktop */
+    height: 500px;
+    /* Altura fixa solicitada para padronização */
+    object-fit: cover;
+    /* Garante que a imagem preencha o espaço sem distorcer */
+    margin-bottom: 20px;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    background-color: #000;
+    /* Fundo preto para imagens com transparência ou carregamento */
+}
+
+/* Container de Miniaturas */
+.modal-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 10px;
+}
+
+.modal-thumb {
+    width: 80px;
+    height: 50px;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.6;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.modal-thumb:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.modal-thumb.active {
+    opacity: 1;
+    border-color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Botão de Reserva na Card */
+.btn-reservar {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: var(--cor-destaque);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transicao);
+    margin-top: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-reservar:hover {
+    background-color: #d17c60;
+    /* Tom mais escuro do destaque */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Modal de Reserva Específico */
+.modal-content.modal-reserva {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    /* var(--border-radius-md) pode não estar definido, usando fixo */
+    max-width: 500px;
+    width: 90%;
+    margin: 5% auto;
+    /* Centraliza verticalmente melhor */
+}
+
+/* Garante que o modal de reserva fique acima de tudo */
+#reservaModal {
+    z-index: 10000 !important;
+}
+
+.modal-content h2 {
+    color: var(--cor-principal);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--cor-secundaria);
+    padding-bottom: 10px;
+}
+
+.reserva-titulo-info {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.modal-close-reserva {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+    line-height: 1;
+}
+
+.modal-close-reserva:hover {
+    color: var(--cor-destaque);
+}
+
+/* Formulário dentro do modal */
+.form-reserva-borda {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Espaço entre os GRUPOS de inputs */
+    width: 100%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* Espaço bem pequeno entre Label e Input */
+    width: 100%;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+    /* Espaço entre os inputs que estão lado a lado */
+    width: 100%;
+}
+
+.form-group.half-width {
+    width: 50%;
+    /* Cada data ocupa metade */
+}
+
+.form-reserva-borda label {
+    font-weight: 600;
+    color: var(--cor-texto);
+    margin-bottom: 0;
+    /* Removendo margem negativa confusa, usando gap do flex container */
+    font-size: 0.95rem;
+}
+
+.form-reserva-borda input,
+.form-reserva-borda textarea {
+    padding: 10px;
+    /* Voltando ao padding original */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: var(--fonte-principal);
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    /* Importante manter para evitar overflow lateral */
+    transition: var(--transicao);
+}
+
+.form-reserva-borda input:focus,
+.form-reserva-borda textarea:focus {
+    border-color: var(--cor-principal);
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 109, 119, 0.2);
+}
+
+.form-reserva-borda textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.btn-enviar-reserva {
+    background-color: #25D366;
+    /* Cor WhatsApp */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: var(--transicao);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-enviar-reserva:hover {
+    background-color: #128C7E;
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+}
+
+/* Animations */
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

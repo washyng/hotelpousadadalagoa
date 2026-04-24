@@ -1,255 +1,245 @@
+/*
+ * Arquivo CSS para Responsividade
+ * Mobile (max-width: 767px)
+ * Tablet (max-width: 1023px)
+ */
 
-/* Regras globais para evitar espaÃ§o extra entre header e destaque */
-.menu {
-    margin-bottom: 0;
-}
+/* ==========================================================================
+   Estilos para Tablet (max-width: 1023px)
+   ========================================================================== */
+@media (max-width: 1023px) {
 
-.destaque {
-    margin-top: 0;
-    padding-top: 0;
-}
-
-.destaque-container h1,
-.destaque-container p {
-    margin-top: 0;
-    font-size: 1.5em;
-}
-
-/* EspaÃ§amento nos parÃ¡grafos dentro das seÃ§Ãµes */
-.secao p {
-    padding: 0 15px;
-}
-
-/* CorreÃƒÂ§ÃƒÂ£o Global para Rolagem Horizontal */
-html, body {
-    overflow-x: hidden;
-}
-
-img, iframe {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Garante que o padding e a borda sejam incluÃƒÂ­dos na largura e altura do elemento */
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
-/* Oculta o botÃƒÂ£o do menu hambÃƒÂºrguer por padrÃƒÂ£o em todas as telas */
-.menu-toggle {
-    display: none;
-}
-
-/* Media Queries para Telas Menores que 768px (Tablets e Smartphones) */
-
-/* EspaÃƒÂ§amento nos parÃƒÂ¡grafos dentro das seÃƒÂ§ÃƒÂµes */
-.secao p {
-    padding: 0 15px;
-}
-@media screen and (max-width: 768px) {
-    /* Exibe o botÃƒÂ£o do menu hambÃƒÂºrguer apenas em telas pequenas */
-     .menu {
-        height: auto !important; /* Permite crescer conforme o conteúdo */
-        min-height: 70px;        /* Altura mínima para o cabeçalho */
-        flex-direction: column;
-        align-items: flex-start;
-        padding-bottom: 10px;
-    }
-    .menu-toggle {
-        display: block;
-        position: fixed; /* Garante que fique sempre visível */
-        top: 20px;
-        right: 20px;
-        z-index: 2001; /* Um valor maior que o do menu */
-        background: none;
-        border: none;
-        font-size: 2em;
-        color: #333;
-        padding: 5px 10px;
+    /* Geral */
+    main {
+        padding: 10px;
     }
 
-    /* Esconde o menu de navegaÃƒÂ§ÃƒÂ£o por padrÃƒÂ£o */
+    /* Menu */
     .menu-links {
-        display: none;
+        gap: 15px;
+    }
+
+    /* Rodapé */
+    .rodape-main {
         flex-direction: column;
-        width: 100%;
-        background-color: lightgray;
-        padding: 10px 0;
-        position: static;
+        text-align: center;
     }
 
-    /* Mostra o menu quando a classe 'active' ÃƒÂ© adicionada via JS */
-    .menu-links.active {
+    .rodape-logo,
+    .rodape-hotel,
+    .rodape-rede-social {
+        margin: 10px auto;
+    }
+
+    .rodape-rede-social {
         display: flex;
+        justify-content: center;
     }
 
-    .logo {
-        max-width: 50%;
-        margin-bottom: 10px;
-        margin-left: 20px;
+    /* Index.html */
+    .secao {
+        flex-direction: column !important;
+        /* Sobrescreve as inversões */
+        text-align: center;
+    }
+
+    .imagem-secao {
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .text {
+        flex: 1;
+    }
+
+    /* Acomodacoes.html */
+    .acomodacao-card {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .acomodacao-imagem {
+        margin: 0 0 20px 0;
+        min-width: 100%;
+    }
+
+    .acomodacao-info {
+        padding: 0;
+    }
+
+    .acomodacao-info ul {
+        text-align: left;
+        margin: 10px auto;
+        max-width: 300px;
+    }
+
+    /* Lazer.html */
+    .filtros-lazer button {
+        margin: 5px 3px;
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+
+    .cards-lazer {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    /* Restaurante.html */
+    .galeria {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    /* Tarifas.html - Tabela responsiva já tratada no tarifas.css */
+}
+
+/* ==========================================================================
+   Estilos para Mobile (max-width: 767px)
+   ========================================================================== */
+@media (max-width: 767px) {
+
+    /* Menu */
+    .menu {
+        padding: 10px;
     }
 
     .logo img {
-        width: 50%;
+        height: 50px;
     }
 
-    nav {
+    .menu-links {
+        display: none;
+        /* Oculta links por padrão */
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        /* Altura do header ajustada */
+        left: 0;
         width: 100%;
-        text-align: left;
+        background-color: var(--cor-texto-claro);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px 0;
+        backdrop-filter: blur(10px);
+    }
+
+    .menu-links.active {
+        display: flex;
+        /* Mostra links quando ativo */
     }
 
     .menu-links a {
-        padding: 10px 15px;
-        border-bottom: 1px solid #ccc;
+        padding: 15px 20px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        /* Separador sutil */
+        text-align: center;
+        width: 100%;
     }
 
-    /* SeÃƒÂ§ÃƒÂµes principais */
+    .menu-toggle {
+        display: block;
+        /* Mostra o botão de toggle */
+    }
+
+    /* Index.html */
+    .destaque {
+        min-height: 100vh;
+        padding-top: 80px;
+        /* Adicionar padding para mobile também */
+    }
+
+    .destaque-container h1 {
+        font-size: 1.8em;
+    }
+
+    .destaque-container p {
+        font-size: 1em;
+    }
+
     .secao {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px 0;
-        max-height: none;
+        padding: 20px 10px;
     }
 
-    .secao .imagem-secao {
-        width: 100%;
-        margin-bottom: 20px;
+    .text h2 {
+        font-size: 1.5em;
     }
 
-    .secao .imagem-secao img {
-        width: 90%;
-        max-width: none;
-        height: auto;
-    }
-
-    .secao .text {
-        width: 100%;
-    }
-
-    /* Destaque */
-    .destaque {
-        margin-top: 0;
-        padding-top: 0;
-    }
-
-    /* RodapÃƒÂ© */
-    .rodape-main {
-        display: flex;
-        flex-direction: column;
-        align-items: center; 
-        text-align: center;
-    }
-
-    .rodape-logo, .rodape-hotel, .rodape-rede-social {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .rodape-logo img {
-        width: 150px;
-    }
-
-    .rodape-rede-social {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 10px;
-    }
-    /* Remove qualquer espaÃ§o entre menu e destaque */
-    .menu {
-        margin-bottom: 0;
-    }
-
-    .destaque {
-        margin-top: 0 !important;
-        padding-top: 0 !important;
-    }
-
-    .destaque-container h1 {
-        margin-top: 0;
-    }
-
-}
-
-/* Media Queries para Telas Menores que 480px (Smartphones) */
-@media screen and (max-width: 480px) {
-    .destaque-container {
-        width: 90%;
-    }
-
-    .destaque-container h1 {
+    /* Contato.html */
+    .text-titulo h1 {
         font-size: 2em;
     }
 
-    /* RodapÃƒÂ© */
-    .rodape-main {
-        flex-direction: column;
+    .local {
+        height: 300px;
     }
 
-    .rodape-logo, .rodape-hotel, .rodape-rede-social {
-        width: 100%;
-        margin-bottom: 20px;
-        text-align: center;
+    .forms {
+        padding: 20px;
     }
 
-    .rodape-logo img {
-        width: 150px;
+    /* Hotel.html */
+    .cards-hotel {
+        grid-template-columns: 1fr;
+        /* Uma coluna */
     }
 
-    .rodape-rede-social {
+    /* Lazer.html */
+    .filtros-lazer {
         display: flex;
-        flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
-        gap: 10px;
     }
 
-    /* Tarifas - Tabela Responsiva */
-    .apartamentos table, .quartos table {
-        display: block;
-        width: 100%;
-        border: none;
+    .filtros-lazer button {
+        flex: 1 1 auto;
+        /* Permite que os botões se ajustem */
+        max-width: 45%;
+        margin: 5px;
     }
 
-    .apartamentos thead, .quartos thead {
-        display: none;
+    .cards-lazer {
+        grid-template-columns: 1fr;
+        /* Uma coluna */
     }
 
-    .apartamentos tbody, .quartos tbody {
-        display: block;
+    /* Restaurante.html */
+    .galeria {
+        grid-template-columns: 1fr;
+        /* Uma coluna */
     }
 
-    .apartamentos tr, .quartos tr {
-        display: block;
-        margin-bottom: 15px;
-        border: 1px solid #ccc;
-        border-radius: 8px;
+    /* Rodapé */
+    .rodape-logo img {
+        height: 60px;
+    }
+}
+
+/* Estilos para Mobile (max-width: 480px) - Conforme solicitado */
+@media (max-width: 480px) {
+
+    /* Geral */
+    h1 {
+        font-size: 1.8em;
     }
 
-    .apartamentos td, .quartos td {
-        display: block;
-        text-align: right;
-        padding-left: 50%;
-        position: relative;
+    h2 {
+        font-size: 1.3em;
     }
 
-    .apartamentos td::before, .quartos td::before {
-        content: attr(data-label);
-        position: absolute;
-        left: 10px;
-        font-weight: bold;
-    }
-    /* Remove qualquer espaÃ§o entre menu e destaque */
-    .menu {
-        margin-bottom: 0;
-    }
-
-    .destaque {
-        margin-top: 0 !important;
-        padding-top: 0 !important;
-    }
-
+    /* Index.html */
     .destaque-container h1 {
-        margin-top: 0;
+        font-size: 1.5em;
     }
 
+    /* Contato.html */
+    .text-titulo h1 {
+        font-size: 1.5em;
+    }
+
+    .forms {
+        margin: 0;
+    }
+
+    /* Acomodacoes.html */
+    .acomodacao-info h2 {
+        font-size: 1.5em;
+    }
 }

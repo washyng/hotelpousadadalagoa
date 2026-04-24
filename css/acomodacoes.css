@@ -1,83 +1,132 @@
-main{
-    padding-top: 130px;
-}
-/* acomodacoes.css */
-main section p:first-child {
-    text-align: center;
-    font-size: 1.5em;
-    margin: 20px 0;
-}
-main section {
+/* Estilos específicos para Acomodações */
+
+/* Estilos específicos para Acomodações */
+
+.acomodacao-card {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 20px;
-    border-bottom: 1px solid #ddd;
-}
-main section:last-child {
-    border-bottom: none;
-}
-.acomodacao{
-    display: flex;
-    flex-wrap: wrap;
-}
-.acomodacao-tipo{
-    display: inline;
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
-    padding: 10px;
-}
-.acomodacao-opcoes ul{
-    width: 100%;
-    display: flex;
+    align-items: flex-start;
+    /* Alinhamento ao topo para melhor layout com thumbs */
+    margin-bottom: 50px;
     padding: 30px;
-    gap: 55px;
+    background-color: #fff;
+    border: none;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transicao);
+    gap: 30px;
+    /* Espaço entre imagem e texto */
 }
-.acomodacao img {
+
+.acomodacao-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-5px);
+}
+
+.acomodacao-imagem {
+    flex: 1;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Espaço entre imagem principal e thumbs */
+}
+
+.acomodacao-imagem img.imagem-secao {
     width: 100%;
-    max-width: 500px;
-    border-radius: 8px;
-    box-shadow: 1px 4px 7px black;
-    margin-right: 20px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    transition: var(--transicao);
 }
-main section div:nth-child(2) {
-    font-size: 1.5em;
-    font-weight: bold;
+
+.acomodacao-imagem img.imagem-secao:hover {
+    transform: scale(1.02);
+}
+
+/* Container das Miniaturas */
+.miniaturas-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.miniatura {
+    width: 18%;
+    /* 5 imagens = ~20% cada - gap */
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: var(--transicao);
+    border: 2px solid transparent;
+}
+
+.miniatura:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.miniatura.active {
+    opacity: 1;
+    border-color: var(--cor-principal);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.acomodacao-info {
+    flex: 1.2;
+}
+
+.acomodacao-info h2 {
+    color: var(--cor-principal);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--cor-destaque);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.acomodacao-info p {
     margin-bottom: 10px;
-}
-main section div ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-main section div ul li {
-    line-height: 1.5em;
+    line-height: 1.6;
 }
 
-@media (max-width: 768px) {
-    main section {
-        text-align: center;
-    }
-    .acomodacao img {
-        margin: 0 0 20px 0;
-    }
-    .acomodacao-opcoes ul {
+.acomodacao-info ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.acomodacao-info li {
+    background-color: var(--cor-fundo);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    color: var(--cor-texto);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.acomodacao-info li::before {
+    content: '✓';
+    color: var(--cor-secundaria);
+    font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .acomodacao-card {
         flex-direction: column;
-        gap: 20px;
-        padding: 10px;
-        align-items: flex-start;
     }
-}
 
-@media (max-width: 480px) {
-    main section div:nth-child(2) {
-        font-size: 1.2em;
-    }
-    .acomodacao-opcoes ul {
-        padding: 0;
-        gap: 10px;
+    .acomodacao-imagem {
+        min-width: 100%;
+        width: 100%;
     }
 }
