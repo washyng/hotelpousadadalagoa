@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="import" href="assets/fonts/amazon.ttf">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="/css/geral.css">
     <link rel="stylesheet" href="/css/responsive.css">
     <link rel="stylesheet" href="/css/acomodacoes.css">
+    <link rel="stylesheet" href="/css/modal.css">
     <title>Hotel Pousada da Lagoas - Acomodações</title>
 </head>
+
 <body>
     <header class="menu">
         <div class="logo">
@@ -19,28 +23,45 @@
         </div>
         <nav>
             <div class="menu-links">
-                <a href="index.html"> Principal </a>
-                <a href="index.html#hotel"> O Hotel </a>
-                <a href="index.html#acomodacoes"> Acomodações</a>
-                <a href="index.html#lazer"> Lazer </a>
-                <a href="index.html#restaurante"> Restaurante</a>
-                <a href="index.html#tarifas"> Tarifas </a>
-                <a href="index.html#contato"> Contatos </a>
+                <a href="index.html"> Home </a>
+                <a href="hotel.html"> O Hotel </a>
+                <a href="acomodacoes.html"> Acomodações</a>
+                <a href="lazer.html"> Lazer </a>
+                <a href="restaurante.html"> Restaurante</a>
+                <a href="tarifas.html"> Tarifas </a>
+                <a href="contato.html"> Contato </a>
             </div>
         </nav>
         <button class="menu-toggle" aria-label="Toggle navigation"> &#9776; </button>
     </header>
 
     <main>
-        <section>
-            <p>Aconchegantes acomodações para seu descanso!!!</p>
+        <section class="secao-texto">
+            <h1>Acomodações</h1>
+            <p>Aconchegantes acomodações para seu descanso!</p>
         </section>
-        <section>
-            <div class="acomodacao">
-                <img src="assets/foto/acomodacoes/1.jpg" alt="Apartamento com hidromassagem">
+
+        <section class="acomodacao-card">
+            <div class="acomodacao-imagem">
+                <img class="imagem-secao" src="assets/foto/acomodacoes/1.jpg" alt="Apartamento com Hidromassagem"
+                    data-gallery='["assets/foto/acomodacoes/1.jpg", "assets/foto/acomodacoes/thumb1.jpg", "assets/foto/acomodacoes/thumb2.jpg", "assets/foto/acomodacoes/thumb3.jpg", "assets/foto/acomodacoes/thumb4.jpg"]'>
+                <div class="miniaturas-container">
+                    <img src="assets/foto/acomodacoes/1.jpg" class="miniatura active"
+                        onclick="trocarImagem(this, 'assets/foto/acomodacoes/1.jpg')">
+                    <img src="assets/foto/acomodacoes/thumb1.jpg" class="miniatura"
+                        onclick="trocarImagem(this, 'assets/foto/acomodacoes/thumb1.jpg')">
+                    <img src="assets/foto/acomodacoes/thumb2.jpg" class="miniatura"
+                        onclick="trocarImagem(this, 'assets/foto/acomodacoes/thumb2.jpg')">
+                    <img src="assets/foto/acomodacoes/thumb3.jpg" class="miniatura"
+                        onclick="trocarImagem(this, 'assets/foto/acomodacoes/thumb3.jpg')">
+                    <img src="assets/foto/acomodacoes/thumb4.jpg" class="miniatura"
+                        onclick="trocarImagem(this, 'assets/foto/acomodacoes/thumb4.jpg')">
+                </div>
             </div>
-            <div class="acomodacao-tipo">Apartamento com Hidromassagem (Casal)</div>
-            <div class="acomodacao-opcoes">
+            <div class="acomodacao-info">
+                <h2>Apartamento com Hidromassagem (Casal)</h2>
+                <p><strong>Valor:</strong> R$ 300,00 a diária</p>
+                <p><strong>Ocupação máxima:</strong> 5 pessoas</p>
                 <ul>
                     <li>Frigobar</li>
                     <li>Ar condicionado</li>
@@ -48,14 +69,32 @@
                     <li>Banheiro com Hidromassagem</li>
                     <li>Garagem privativa</li>
                 </ul>
+                <button class="btn-reservar" onclick="abrirReserva('Apartamento com Hidromassagem (Casal)')">Reservar
+                    Agora</button>
             </div>
         </section>
-        <section>
-            <div class="acomodacao">
-                <img src="assets/foto/acomodacoes/2.jpg" alt="Apartamento simples de casal">
+
+        <section class="acomodacao-card">
+            <div class="acomodacao-imagem">
+                <img class="imagem-secao" src="assets/foto/acomodacoes/2.jpg" alt="Apartamento Simples Casal"
+                    data-gallery='["assets/foto/acomodacoes/2.jpg", "assets/foto/acomodacoes/thumb1.jpg", "assets/foto/acomodacoes/thumb2.jpg", "assets/foto/acomodacoes/thumb3.jpg", "assets/foto/acomodacoes/thumb4.jpg"]'>
+                <div class="miniaturas-container">
+                    <img src="assets/foto/acomodacoes/2.jpg" class="miniatura active"
+                        onclick="trocarImagem(this, 'assets/foto/acomodacoes/2.jpg')">
+                    <img src="assets/foto/acomodacoes/thumb1.jpg" class="miniatura"
+                        onclick="trocarImagem(this, 'assets/foto/acomodacoes/thumb1.jpg')">
+                    <img src="assets/foto/acomodacoes/thumb2.jpg" class="miniatura"
+                        onclick="trocarImagem(this, 'assets/foto/acomodacoes/thumb2.jpg')">
+                    <img src="assets/foto/acomodacoes/thumb3.jpg" class="miniatura"
+                        onclick="trocarImagem(this, 'assets/foto/acomodacoes/thumb3.jpg')">
+                    <img src="assets/foto/acomodacoes/thumb4.jpg" class="miniatura"
+                        onclick="trocarImagem(this, 'assets/foto/acomodacoes/thumb4.jpg')">
+                </div>
             </div>
-             <div class="acomodacao-tipo">Apartamento Simples (Casal)</div>
-            <div class="acomodacao-opcoes">
+            <div class="acomodacao-info">
+                <h2>Apartamento Simples (Casal)</h2>
+                <p><strong>Valor:</strong> R$ 200,00 a diária</p>
+                <p><strong>Ocupação máxima:</strong> 3 pessoas</p>
                 <ul>
                     <li>Frigobar</li>
                     <li>Ar condicionado</li>
@@ -63,14 +102,32 @@
                     <li>Banheiro</li>
                     <li>Garagem privativa</li>
                 </ul>
+                <button class="btn-reservar" onclick="abrirReserva('Apartamento Simples (Casal)')">Reservar
+                    Agora</button>
             </div>
         </section>
-        <section>
-            <div class="acomodacao">
-                <img src="assets/foto/acomodacoes/3.jpg" alt="Apartamento simples de solteiro">
+
+        <section class="acomodacao-card">
+            <div class="acomodacao-imagem">
+                <img class="imagem-secao" src="assets/foto/acomodacoes/3.jpg" alt="Apartamento Simples Solteiro"
+                    data-gallery='["assets/foto/acomodacoes/3.jpg", "assets/foto/acomodacoes/thumb1.jpg", "assets/foto/acomodacoes/thumb2.jpg", "assets/foto/acomodacoes/thumb3.jpg", "assets/foto/acomodacoes/thumb4.jpg"]'>
+                <div class="miniaturas-container">
+                    <img src="assets/foto/acomodacoes/3.jpg" class="miniatura active"
+                        onclick="trocarImagem(this, 'assets/foto/acomodacoes/3.jpg')">
+                    <img src="assets/foto/acomodacoes/thumb1.jpg" class="miniatura"
+                        onclick="trocarImagem(this, 'assets/foto/acomodacoes/thumb1.jpg')">
+                    <img src="assets/foto/acomodacoes/thumb2.jpg" class="miniatura"
+                        onclick="trocarImagem(this, 'assets/foto/acomodacoes/thumb2.jpg')">
+                    <img src="assets/foto/acomodacoes/thumb3.jpg" class="miniatura"
+                        onclick="trocarImagem(this, 'assets/foto/acomodacoes/thumb3.jpg')">
+                    <img src="assets/foto/acomodacoes/thumb4.jpg" class="miniatura"
+                        onclick="trocarImagem(this, 'assets/foto/acomodacoes/thumb4.jpg')">
+                </div>
             </div>
-             <div class="acomodacao-tipo">Apartamento Simples (Solteiro)</div>
-            <div class="acomodacao-opcoes">
+            <div class="acomodacao-info">
+                <h2>Apartamento Simples (Solteiro)</h2>
+                <p><strong>Valor:</strong> R$ 150,00 a diária</p>
+                <p><strong>Ocupação máxima:</strong> 2 pessoas</p>
                 <ul>
                     <li>Frigobar</li>
                     <li>Ar condicionado</li>
@@ -78,24 +135,44 @@
                     <li>Banheiro</li>
                     <li>Garagem privativa</li>
                 </ul>
+                <button class="btn-reservar" onclick="abrirReserva('Apartamento Simples (Solteiro)')">Reservar
+                    Agora</button>
             </div>
         </section>
-        <section>
-            <div class="acomodacao">
-                <img src="assets/foto/acomodacoes/4.jpg" alt="Quarto de solteiro">
+
+        <section class="acomodacao-card">
+            <div class="acomodacao-imagem">
+                <img class="imagem-secao" src="assets/foto/acomodacoes/4.jpg" alt="Quarto Solteiro"
+                    data-gallery='["assets/foto/acomodacoes/4.jpg", "assets/foto/acomodacoes/thumb1.jpg", "assets/foto/acomodacoes/thumb2.jpg", "assets/foto/acomodacoes/thumb3.jpg", "assets/foto/acomodacoes/thumb4.jpg"]'>
+                <div class="miniaturas-container">
+                    <img src="assets/foto/acomodacoes/4.jpg" class="miniatura active"
+                        onclick="trocarImagem(this, 'assets/foto/acomodacoes/4.jpg')">
+                    <img src="assets/foto/acomodacoes/thumb1.jpg" class="miniatura"
+                        onclick="trocarImagem(this, 'assets/foto/acomodacoes/thumb1.jpg')">
+                    <img src="assets/foto/acomodacoes/thumb2.jpg" class="miniatura"
+                        onclick="trocarImagem(this, 'assets/foto/acomodacoes/thumb2.jpg')">
+                    <img src="assets/foto/acomodacoes/thumb3.jpg" class="miniatura"
+                        onclick="trocarImagem(this, 'assets/foto/acomodacoes/thumb3.jpg')">
+                    <img src="assets/foto/acomodacoes/thumb4.jpg" class="miniatura"
+                        onclick="trocarImagem(this, 'assets/foto/acomodacoes/thumb4.jpg')">
+                </div>
             </div>
-             <div class="acomodacao-tipo">Quarto (Solteiro)</div>
-            <div class="acomodacao-opcoes">
+            <div class="acomodacao-info">
+                <h2>Quarto (Solteiro)</h2>
+                <p><strong>Valor:</strong> R$ 120,00 a diária</p>
+                <p><strong>Ocupação máxima:</strong> 3 pessoas</p>
                 <ul>
                     <li>Ventilador</li>
                     <li>Banheiro</li>
                     <li>2 a 3 Camas</li>
                 </ul>
+                <button class="btn-reservar" onclick="abrirReserva('Quarto (Solteiro)')">Reservar Agora</button>
             </div>
         </section>
     </main>
 
-     <footer class="rodape">
+
+    <footer class="rodape">
         <div class="rodape-main">
             <div class="rodape-logo">
                 <img src="assets/img/logo_nova.jpg" alt="Logo Hotel Pousada da Lagoa">
@@ -107,21 +184,67 @@
                 <p><strong>Telefones: </strong>(38) 3723-9288 / (38) 9 8826-9793 / (38) 9 9944-5752</p>
             </div>
             <div class="rodape-rede-social">
-                <a href="https://www.instagram.com/hotelpousadadalagoa/" target="_blank" rel="noopener noreferrer"><img src="assets/icon/instagram.png" alt="Instagram"></a>
-                <a href="https://wa.me/5538988269793" target="_blank" rel="noopener noreferrer"><img src="assets/icon/whatsapp.png" alt="Whatsapp"></a>
+                <a href="https://www.instagram.com/hotelpousadadalagoa/" target="_blank" rel="noopener noreferrer"><img
+                        src="assets/icon/instagram.png" alt="Instagram"></a>
+                <a href="https://wa.me/5538988269793" target="_blank" rel="noopener noreferrer"><img
+                        src="assets/icon/whatsapp.png" alt="Whatsapp"></a>
             </div>
         </div>
-         <div class="rodape-corporate">
+        <div class="rodape-corporate">
             <p>&copy; 2025 Hotel Pousada da Lagoa. Todos os direitos reservados. Desenvolvido por devLoopz</p>
         </div>
     </footer>
-    <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const menuLinks = document.querySelector('.menu-links');
+    <script src="js/menu.js"></script>
 
-        menuToggle.addEventListener('click', () => {
-            menuLinks.classList.toggle('active');
-        });
-    </script>
+    <!-- Modal para Imagens -->
+    <div id="imageModal" class="modal">
+        <span class="modal-close">&times;</span>
+        <div class="modal-content">
+            <img id="modalImg" src="" alt="Imagem ampliada">
+            <div id="modalGallery" class="modal-gallery"></div>
+        </div>
+    </div>
+
+    <!-- Modal para Reservas -->
+    <div id="reservaModal" class="modal">
+        <div class="modal-content modal-reserva">
+            <span class="modal-close-reserva">&times;</span>
+            <h2>Fazer Reserva</h2>
+            <p class="reserva-titulo-info">Solicitando reserva para: <span id="nome-acomodacao-reserva"
+                    style="color: var(--cor-principal); font-weight: bold;"></span></p>
+            <div id="formulario-whatsapp" class="form-reserva-borda">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group half-width">
+                        <label for="data-in">Data Check-in</label>
+                        <input type="datetime-local" id="data-in">
+                    </div>
+
+                    <div class="form-group half-width">
+                        <label for="data-out">Data Check-out</label>
+                        <input type="datetime-local" id="data-out">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem"></textarea>
+                </div>
+
+                <button type="button" id="enviarWhats" class="btn-enviar-reserva">Enviar Solicitação</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/modal.js"></script>
 </body>
+
 </html>

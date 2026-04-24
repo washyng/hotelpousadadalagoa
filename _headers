@@ -1,0 +1,67 @@
+/*
+/* Apply security headers to all paths */
+/* Netlify syntax: path followed by header lines. This applies to all files (/*).
+   Adjust if needed for specific paths. */
+/*
+/*
+/*
+/*
+*/
+/*
+/*
+*/
+/*
+/*
+*/
+/*
+*/
+/*
+*/
+/*
+*/
+/*
+*/
+/*
+*/
+
+/*
+/* Global headers for Netlify */
+/*
+/*
+*/
+
+/*
+/* Use explicit path and headers below */
+/*
+/*
+*/
+
+/*
+/*
+*/
+
+/*
+/*
+*/
+
+/*
+*/
+
+/*
+  This file intentionally left with a simple header block below. Edit if deploying to Netlify.
+*/
+
+/*
+/*
+*/
+
+/*
+  /  <-- path line for all files
+*/
+/*
+/*
+*/
+
+/*
+  (See KINGHOST_SECURITY.md for Apache/KingHost instructions)
+*/

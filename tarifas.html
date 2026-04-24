@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="import" href="assets/fonts/amazon.ttf">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="/css/geral.css">
     <link rel="stylesheet" href="/css/responsive.css">
     <link rel="stylesheet" href="/css/tarifas.css">
     <title>Hotel Pousada da Lagoas - Tarifas</title>
 </head>
+
 <body>
     <header class="menu">
         <div class="logo">
@@ -19,13 +22,13 @@
         </div>
         <nav>
             <div class="menu-links">
-                <a href="index.html"> Principal </a>
-                <a href="index.html#hotel"> O Hotel </a>
-                <a href="index.html#acomodacoes"> Acomodações</a>
-                <a href="index.html#lazer"> Lazer </a>
-                <a href="index.html#restaurante"> Restaurante</a>
-                <a href="index.html#tarifas"> Tarifas </a>
-                <a href="index.html#contato"> Contatos </a>
+                <a href="index.html"> Home </a>
+                <a href="hotel.html"> O Hotel </a>
+                <a href="acomodacoes.html"> Acomodações</a>
+                <a href="lazer.html"> Lazer </a>
+                <a href="restaurante.html"> Restaurante</a>
+                <a href="tarifas.html"> Tarifas </a>
+                <a href="contato.html"> Contato </a>
             </div>
         </nav>
         <button class="menu-toggle" aria-label="Toggle navigation"> &#9776; </button>
@@ -34,13 +37,14 @@
     <main>
         <section class="secao-texto">
             <h1>TARIFAS POR DIÁRIA:</h1>
-            <p>A nossa diária dá direito à piscina, sauna e um delicioso café da manhã com várias qualidades de bolo, queijo, suco, café, leite, pão, torrada e frutas!</p>
+            <p>A nossa diária dá direito à piscina, sauna e um delicioso café da manhã com várias qualidades de bolo,
+                queijo, suco, café, leite, pão, torrada e frutas!</p>
         </section>
         <section>
             <div class="apartamentos">
                 <table>
                     <caption class="tab-titulo">Apartamentos</caption>
-                    <thead>     
+                    <thead>
                         <tr>
                             <th>Tipo</th>
                             <th>Modalidade</th>
@@ -73,8 +77,8 @@
         </section>
         <section>
             <div class="quartos">
-                 <table>
-                     <caption colspan="4" class="tab-titulo">Quartos</caption>
+                <table>
+                    <caption colspan="4" class="tab-titulo">Quartos</caption>
                     <thead>
                         <tr>
                             <th>Tipo</th>
@@ -96,8 +100,8 @@
         </section>
         <section>
             <div class="chales">
-                 <table>
-                        <caption colspan="4" class="tab-titulo">Chalés</caption>
+                <table>
+                    <caption colspan="4" class="tab-titulo">Chalés</caption>
                     <thead>
                         <tr>
                             <th>Tipo</th>
@@ -137,21 +141,17 @@
                 <p><strong>Telefones: </strong>(38) 3723-9288 / (38) 9 8826-9793 / (38) 9 9944-5752</p>
             </div>
             <div class="rodape-rede-social">
-                <a href="https://www.instagram.com/hotelpousadadalagoa/" target="_blank" rel="noopener noreferrer"><img src="assets/icon/instagram.png" alt="Instagram"></a>
-                <a href="https://wa.me/5538988269793" target="_blank" rel="noopener noreferrer"><img src="assets/icon/whatsapp.png" alt="Whatsapp"></a>
+                <a href="https://www.instagram.com/hotelpousadadalagoa/" target="_blank" rel="noopener noreferrer"><img
+                        src="assets/icon/instagram.png" alt="Instagram"></a>
+                <a href="https://wa.me/5538988269793" target="_blank" rel="noopener noreferrer"><img
+                        src="assets/icon/whatsapp.png" alt="Whatsapp"></a>
             </div>
         </div>
         <div class="rodape-corporate">
             <p>&copy; 2025 Hotel Pousada da Lagoa. Todos os direitos reservados. Desenvolvido por devLoopz</p>
         </div>
     </footer>
-    <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const menuLinks = document.querySelector('.menu-links');
-
-        menuToggle.addEventListener('click', () => {
-            menuLinks.classList.toggle('active');
-        });
-    </script>
+    <script src="js/menu.js"></script>
 </body>
+
 </html>

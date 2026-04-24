@@ -8,10 +8,20 @@
     <link rel="import" href="assets/fonts/amazon.ttf">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="/css/geral.css">
     <link rel="stylesheet" href="/css/responsive.css">
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/modal.css">
+
+    <!-- Security meta (recommended; real protection via HTTP headers on the server) -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' https:; img-src 'self' data: https:; script-src 'self' https:; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; frame-src https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'self';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
     <title>Hotel Pousada da Lagoa</title>
 </head>
 
@@ -22,13 +32,13 @@
         </div>
         <nav>
             <div class="menu-links">
-                <a href="index.html"> Principal </a>
-                <a href="#hotel"> O Hotel </a>
-                <a href="#acomodacoes"> Acomodações</a>
-                <a href="#lazer"> Lazer </a>
-                <a href="#restaurante"> Restaurante</a>
-                <a href="#tarifas"> Tarifas </a>
-                <a href="#contato"> Contatos </a>
+                <a href="index.html"> Home </a>
+                <a href="hotel.html"> O Hotel </a>
+                <a href="acomodacoes.html"> Acomodações</a>
+                <a href="lazer.html"> Lazer </a>
+                <a href="restaurante.html"> Restaurante</a>
+                <a href="tarifas.html"> Tarifas </a>
+                <a href="contato.html"> Contato </a>
             </div>
         </nav>
         <button class="menu-toggle" aria-label="Toggle navigation"> &#9776; </button>
@@ -38,27 +48,28 @@
         <section class="destaque">
             <div class="destaque-container">
                 <h1>HOTEL POUSADA DA LAGOA!</h1>
-                <P>Conforto, Tranquilidade, Boa alimenetação, Completa infra-estrutura de lazer, e muita Diversão</P>
+                <P>Conforto, tranquilidade, boa alimentação, completa infra-estrutura de lazer, e muita diversão</P>
             </div>
         </section>
-        
-            <section>
-                <section id="hotel" class="hotel secao">
-                    <div class="imagem-secao">
-                        <img src="assets/foto/hotel/1.jpg" alt="Vista exterior do hotel">
-                    </div>
-                    <div class="text">
-                        <h2>Sobre o Hotel Pousada da Lagoa</h2>
-                        <p>Venha conhecer o Hotel Pousada da Lagoa e desfrutar de um ambiente confortável, aconchegante, tranquilo e seguro.</p>
-                        <a href="hotel.html">Saiba Mais!</a>
-                    </div>
-                </section>
+
+        <section>
+            <section id="hotel" class="hotel secao">
+                <div class="imagem-secao">
+                    <img class="imagem-secao" src="assets/foto/hotel/1.jpg" alt="Vista exterior do hotel">
+                </div>
+                <div class="text">
+                    <h2>Sobre o Hotel Pousada da Lagoa</h2>
+                    <p>Venha conhecer o Hotel Pousada da Lagoa e desfrutar de um ambiente confortável, aconchegante,
+                        tranquilo e seguro.</p>
+                    <a href="hotel.html">Saiba Mais!</a>
+                </div>
             </section>
-        
+        </section>
+
         <section class="fundo">
             <section id="acomodacoes" class="acomodacao secao">
                 <div class="imagem-secao">
-                    <img src="assets/foto/acomodacoes/1.jpg" alt="Quarto de casal no hotel">
+                    <img class="imagem-secao" src="assets/foto/acomodacoes/1.jpg" alt="Quarto de casal no hotel">
                 </div>
                 <div class="text">
                     <h2>Sobre as Acomodacoes</h2>
@@ -70,7 +81,7 @@
         <section>
             <section id="lazer" class="lazer secao">
                 <div class="imagem-secao">
-                    <img src="assets/foto/lazer/aqutico06.jpg" alt="Área de piscina do hotel">
+                    <img class="imagem-secao" src="assets/foto/lazer/aqutico06.jpg" alt="Área de piscina do hotel">
                 </div>
                 <div class="text">
                     <h2>Sobre o Lazer</h2>
@@ -82,11 +93,11 @@
         <section class="fundo">
             <section id="restaurante" class="restaurante secao">
                 <div class="imagem-secao">
-                    <img src="assets/foto/restaurante/1.jpg" alt="Restaurante do hotel">
+                    <img class="imagem-secao" src="assets/foto/restaurante/1.jpg" alt="Restaurante do hotel">
                 </div>
                 <div class="text">
                     <h2>Sobre o Restaurante</h2>
-                    <p>O horário de funcionamento do restaurante é de 11:00hs  ás 22:00hs.</p>
+                    <p>O horário de funcionamento do restaurante é de 11:00hs ás 22:00hs.</p>
                     <a href="restaurante.html">Saiba Mais!</a>
                 </div>
             </section>
@@ -94,11 +105,12 @@
         <section>
             <section id="tarifas" class="tarifas secao">
                 <div class="imagem-secao">
-                    <img src="assets/foto/acomodacoes/2.jpg" alt="Detalhe de uma acomodação">
+                    <img class="imagem-secao" src="assets/foto/acomodacoes/2.jpg" alt="Detalhe de uma acomodação">
                 </div>
                 <div class="text">
                     <h2>Sobre as tarifas</h2>
-                    <p>A nossa diária dá direito à piscina, sauna e um delicioso café da manhã com várias qualidades de bolo, queijo, suco, café, leite, pão, torrada e frutas!.</p>
+                    <p>A nossa diária dá direito à piscina, sauna e um delicioso café da manhã com várias qualidades de
+                        bolo, queijo, suco, café, leite, pão, torrada e frutas!.</p>
                     <a href="tarifas.html">Saiba Mais!</a>
                 </div>
             </section>
@@ -106,7 +118,9 @@
         <section class="fundo">
             <section id="contato" class="contato secao">
                 <div class="imagem-secao">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1014.0588077936663!2d-44.54463776596715!3d-19.137039302249182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa7c8a91b02aee7%3A0xdf45958fce7256e3!2sHotel%20e%20Pousada%20da%20Lagoa!5e0!3m2!1spt-BR!2sbr!4v1750115590194!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1014.0588077936663!2d-44.54463776596715!3d-19.137039302249182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa7c8a91b02aee7%3A0xdf45958fce7256e3!2sHotel%20e%20Pousada%20da%20Lagoa!5e0!3m2!1spt-BR!2sbr!4v1750115590194!5m2!1spt-BR!2sbr"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div class="text">
                     <h2>Sobre o Contato</h2>
@@ -129,23 +143,27 @@
                 <p><strong>Telefones: </strong>(38) 3723-9288 / (38) 9 8826-9793 / (38) 9 9944-5752</p>
             </div>
             <div class="rodape-rede-social">
-                <a href="https://www.instagram.com/hotelpousadadalagoa/" target="_blank" rel="noopener noreferrer"><img src="assets/icon/instagram.png" alt="Instagram"></a>
-                <a href="https://wa.me/5538988269793" target="_blank" rel="noopener noreferrer"><img src="assets/icon/whatsapp.png" alt="Whatsapp"></a>
+                <a href="https://www.instagram.com/hotelpousadadalagoa/" target="_blank" rel="noopener noreferrer"><img
+                        src="assets/icon/instagram.png" alt="Instagram"></a>
+                <a href="https://wa.me/5538988269793" target="_blank" rel="noopener noreferrer"><img
+                        src="assets/icon/whatsapp.png" alt="Whatsapp"></a>
             </div>
         </div>
         <div class="rodape-corporate">
             <p>&copy; 2025 Hotel Pousada da Lagoa. Todos os direitos reservados. Desenvolvido por devLoopz</p>
         </div>
     </footer>
-    <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const menuLinks = document.querySelector('.menu-links');
+    <script src="js/menu.js"></script>
 
-        menuToggle.addEventListener('click', () => {
-            menuLinks.classList.toggle('active');
-        });
-    </script>
+    <!-- Modal para Imagens -->
+    <div id="imageModal" class="modal">
+        <span class="modal-close">&times;</span>
+        <div class="modal-content">
+            <img id="modalImg" src="" alt="Imagem ampliada">
+        </div>
+    </div>
 
+    <script src="js/modal.js"></script>
 </body>
 
 </html>

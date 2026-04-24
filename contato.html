@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="import" href="assets/fonts/amazon.ttf">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="/css/geral.css">
     <link rel="stylesheet" href="/css/responsive.css">
     <link rel="stylesheet" href="/css/contato.css">
     <title>Hotel Pousada da Lagoas - Contato</title>
 </head>
+
 <body>
     <header class="menu">
         <div class="logo">
@@ -19,57 +22,58 @@
         </div>
         <nav>
             <div class="menu-links">
-                <a href="index.html"> Principal </a>
-                <a href="index.html#hotel"> O Hotel </a>
-                <a href="index.html#acomodacoes"> Acomodações</a>
-                <a href="index.html#lazer"> Lazer </a>
-                <a href="index.html#restaurante"> Restaurante</a>
-                <a href="index.html#tarifas"> Tarifas </a>
-                <a href="index.html#contato"> Contatos </a>
+                <a href="index.html"> Home </a>
+                <a href="hotel.html"> O Hotel </a>
+                <a href="acomodacoes.html"> Acomodações</a>
+                <a href="lazer.html"> Lazer </a>
+                <a href="restaurante.html"> Restaurante</a>
+                <a href="tarifas.html"> Tarifas </a>
+                <a href="contato.html"> Contato </a>
             </div>
         </nav>
         <button class="menu-toggle" aria-label="Toggle navigation"> &#9776; </button>
     </header>
-    </header>
 
     <main>
-        <section class="titulo">
-            <div class="text-titulo">
-                <h1>Faca já a sua Reserva </h1>
-                <p>E venha desfrutar da melhor experiência junto a natureza.</p>
-            </div>
+        <section class="secao-texto">
+            <h1>Venha fazer seu contato</h1>
+            <p>E venha desfrutar da melhor experiência junto a natureza.</p>
         </section>
         <section class="mapa">
             <div class="local">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1014.0588077936663!2d-44.54463776596715!3d-19.137039302249182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa7c8a91b02aee7%3A0xdf45958fce7256e3!2sHotel%20e%20Pousada%20da%20Lagoa!5e0!3m2!1spt-BR!2sbr!4v1750115590194!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe class="map-embed"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1014.0588077936663!2d-44.54463776596715!3d-19.137039302249182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa7c8a91b02aee7%3A0xdf45958fce7256e3!2sHotel%20e%20Pousada%20da%20Lagoa!5e0!3m2!1spt-BR!2sbr!4v1750115590194!5m2!1spt-BR!2sbr"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
 
+        <!-- Formulário ocultado conforme solicitado
         <section>
-        <div class="forms">
-            <div id="formulario-whatsapp">
-                <label for="nome">Nome</label><br>
-                <input type="text" id="nome"> <br>
+            <div class="forms">
+                <div id="formulario-whatsapp">
+                    <label for="nome">Nome</label><br>
+                    <input type="text" id="nome"> <br>
 
-                <label for="email">E-mail</label><br>
-                <input type="email" id="email">
+                    <label for="email">E-mail</label><br>
+                    <input type="email" id="email">
 
-                <label for="data">Data Chek-in</label>
-                <input type="datetime-local">
-               
-                <label for="data">Data Chek-out</label>
-                <input type="datetime-local">
+                    <label for="data">Data Chek-in</label>
+                    <input type="datetime-local">
 
-                <label for="mensagem">Mensagem</label><br>
-                <textarea id="mensagem"></textarea><br>
+                    <label for="data">Data Chek-out</label>
+                    <input type="datetime-local">
 
-                <button type="button" onclick="enviarParaWhatsApp()">Enviar</button>
+                    <label for="mensagem">Mensagem</label><br>
+                    <textarea id="mensagem"></textarea><br>
+
+                    <button type="button" id="enviarWhats">Enviar</button>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+        -->
     </main>
 
-     <footer class="rodape">
+    <footer class="rodape">
         <div class="rodape-main">
             <div class="rodape-logo">
                 <img src="assets/img/logo_nova.jpg" alt="Logo Hotel Pousada da Lagoa">
@@ -81,21 +85,18 @@
                 <p><strong>Telefones: </strong>(38) 3723-9288 / (38) 9 8826-9793 / (38) 9 9944-5752</p>
             </div>
             <div class="rodape-rede-social">
-                <a href="https://www.instagram.com/hotelpousadadalagoa/" target="_blank" rel="noopener noreferrer"><img src="assets/icon/instagram.png" alt="Instagram"></a>
-                <a href="https://wa.me/5538988269793" target="_blank" rel="noopener noreferrer"><img src="assets/icon/whatsapp.png" alt="Whatsapp"></a>
+                <a href="https://www.instagram.com/hotelpousadadalagoa/" target="_blank" rel="noopener noreferrer"><img
+                        src="assets/icon/instagram.png" alt="Instagram"></a>
+                <a href="https://wa.me/5538988269793" target="_blank" rel="noopener noreferrer"><img
+                        src="assets/icon/whatsapp.png" alt="Whatsapp"></a>
             </div>
         </div>
         <div class="rodape-corporate">
             <p>&copy; 2025 Hotel Pousada da Lagoa. Todos os direitos reservados. Desenvolvido por devLoopz</p>
         </div>
     </footer>
-    <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const menuLinks = document.querySelector('.menu-links');
-
-        menuToggle.addEventListener('click', () => {
-            menuLinks.classList.toggle('active');
-        });
-    </script>
+    <script src="js/menu.js"></script>
+    <script src="js/contact.js"></script>
 </body>
+
 </html>
